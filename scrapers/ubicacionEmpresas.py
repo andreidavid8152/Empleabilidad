@@ -24,7 +24,7 @@ driver = webdriver.Chrome(
 )
 
 # Leer datos del Excel
-df = pd.read_excel("data/ubicaciones.xlsx")
+df = pd.read_excel("data/ubicacionesEmpresas.xlsx")
 df["UBICACION"]   = df["UBICACION"].astype("object")
 df["COORDENADAS"] = df.get("COORDENADAS", pd.Series([""] * len(df))).astype("object")
 df["MAPA_URL"]    = df.get("MAPA_URL",    pd.Series([""] * len(df))).astype("object")
@@ -150,6 +150,6 @@ except KeyboardInterrupt:
 
 finally:
     # Guardar en cualquier caso
-    df.to_excel("data/ubicaciones.xlsx", index=False)
+    df.to_excel("data/ubicacionesEmpresas.xlsx", index=False)
     driver.quit()
-    print("✅ Datos guardados en 'ubicaciones.xlsx'.")
+    print("✅ Datos guardados en 'ubicacionesEmpresas.xlsx'.")

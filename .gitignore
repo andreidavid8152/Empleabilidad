@@ -1,0 +1,8 @@
+# Ignorar entorno virtual
+.venv/
+
+# Ignorar variables entorno
+.env
+
+# Ignorar directorios pycache
+**/__pycache__/
