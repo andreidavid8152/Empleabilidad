@@ -2,3 +2,6 @@ pandas
 selenium
 webdriver-manager
 openpyxl
+numpy
+requests
+python-dotenv
